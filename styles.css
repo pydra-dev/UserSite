@@ -115,7 +115,6 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
     position: sticky;
     top: 0;
-    z-index: 100;
 }
 
 .links{
@@ -167,7 +166,7 @@ body {
 /* Hero Image CSS */
 
 .about, .contact, .projects, .hero-image {
-    /* height: 100vh; */ /* <-- Remove or comment out this line */
+    height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -263,100 +262,9 @@ footer {
     padding: 25px;
 }
 
-/* Hero background with blur */
-.hero-bg {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    background: url('./img/projects.jpg') center center/cover no-repeat;
-    filter: blur(8px) brightness(0.7);
-    z-index: 0;
-    pointer-events: none;
-}
-.hero-section {
-    position: relative;
-    width: 100%;
-    /* min-height: 100vh; */ /* Remove or comment out this line */
-    padding: 80px 0 60px 0;  /* Add vertical padding instead */
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-}
-.hero-content {
-    position: relative;
-    z-index: 2;
-    /* min-height: 100vh; */ /* Remove or comment out this line */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 8vw 5vw;
-    color: #fff;
-}
+/* Add these styles to the end of your existing CSS file */
 
-.hero-content h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-    font-weight: 700;
-}
-
-.goal {
-    font-size: 1.5rem;
-    max-width: 600px;
-    background: rgba(33,33,33,0.7);
-    border-radius: 16px;
-    padding: 2rem;
-    margin-top: 1rem;
-    box-shadow: 0 4px 32px rgba(0,0,0,0.2);
-}
-
-/* Pi circle and quote */
-.pi-quote-container {
-    position: fixed;
-    bottom: 40px;
-    right: 40px;
-    display: flex;
-    align-items: flex-end;
-    z-index: 10;
-}
-
-.pi-circle {
-    width: 110px;
-    height: 110px;
-    background: #fff;
-    border-radius: 50%;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 18px;
-}
-
-.pi-circle img {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-}
-
-.pi-quote {
-    background: rgba(46,176,223,0.95);
-    color: #fff;
-    font-size: 1.1rem;
-    border-radius: 18px 18px 18px 0;
-    padding: 1.2rem 1.5rem;
-    max-width: 320px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
-    margin-bottom: 18px;
-    animation: fadeIn 0.7s;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px);}
-    to { opacity: 1; transform: translateY(0);}
-}
-
-/* Blobs for sections */
+/* Blob styling for all sections */
 .blob {
     position: absolute;
     z-index: 0;
@@ -364,13 +272,14 @@ footer {
     filter: blur(8px);
     pointer-events: none;
 }
-.about, .projects, .contact {
+
+.about, .projects, .contact, .waitlist {
     position: relative;
     overflow: hidden;
     z-index: 1;
 }
 
-/* Section Bubble */
+/* Section bubble styling */
 .section-bubble {
     position: relative;
     z-index: 1;
@@ -386,15 +295,80 @@ footer {
     text-align: center;
     transition: box-shadow 0.3s;
 }
+
 .section-bubble:hover {
     box-shadow: 0 12px 48px rgba(46,176,223,0.15);
 }
 
-/* Responsive */
-@media (max-width: 700px) {
-    .hero-content { padding: 16vw 4vw; }
-    .pi-quote-container { bottom: 10px; right: 10px; }
-    .pi-circle { width: 70px; height: 70px; }
-    .pi-circle img { width: 50px; height: 50px; }
-    .pi-quote { font-size: 1rem; padding: 0.8rem 1rem; }
+/* Waitlist section styling */
+.waitlist {
+    height: 100vh;
+    background-image: linear-gradient(rgba(33, 33, 33, 0.9), rgba(33, 33, 33, 0.9)), url("./img/projects.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+}
+
+/* Waitlist form specific styling - overrides the general form styles */
+.waitlist-form {
+    background: transparent !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    max-width: 100%;
+    width: 100%;
+}
+
+.waitlist-form input {
+    width: 100% !important;
+    padding: 16px 20px !important;
+    margin: 10px 0 !important;
+    border: 2px solid rgba(46,176,223,0.3) !important;
+    border-radius: 12px !important;
+    background: rgba(255,255,255,0.05) !important;
+    color: #fff !important;
+    font-size: 1.1rem !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+    transition: border-color 0.3s, background 0.3s !important;
+}
+
+.waitlist-form input:focus {
+    outline: none !important;
+    border-color: #2eb0df !important;
+    background: rgba(255,255,255,0.1) !important;
+}
+
+.waitlist-form input::placeholder {
+    color: rgba(255,255,255,0.6) !important;
+    text-align: center !important;
+}
+
+.waitlist-form button {
+    width: 100% !important;
+    padding: 16px 20px !important;
+    margin-top: 20px !important;
+    border: none !important;
+    border-radius: 12px !important;
+    background: linear-gradient(135deg, #1e8bb5 0%, #155a75 100%) !important;
+    color: #fff !important;
+    font-size: 1.2rem !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: transform 0.3s, box-shadow 0.3s !important;
+    box-shadow: 0 4px 15px rgba(30,139,181,0.3) !important;
+}
+
+.waitlist-form button:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(30,139,181,0.4) !important;
+}
+
+.waitlist-form button:active {
+    transform: translateY(0) !important;
 }
