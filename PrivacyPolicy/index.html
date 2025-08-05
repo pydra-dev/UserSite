@@ -1,0 +1,122 @@
+<!-- Site By The Pydra Team, Images Licensed to Unsplash, some elements from FOSS Sources, Licensed under the GNU Affero General Public License v3.0 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Terms of Use | The Pydra Project</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:image" content="https://pydra.dev/favicon.png">
+    <meta name="title" content="The Pydra Project | Welcome">
+    <meta name="description" content="Pydra | Hosting for all.">
+    <meta name="keywords" content="pydra, the pydra project, free vps, server hosting, free server, server, server for students, free for dev, pydra, microservers, raspberry pi servers, student computing, nonprofit tech, pydra project, pydra.dev">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="language" content="English">
+    <meta name="author" content="The Pydra Project Team">
+    
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9fa80674d6.js" crossorigin="anonymous"></script>
+</head>
+<body id="home">
+
+<!-- Scroll to Top Button -->
+<button onclick="topFunction()" id="myBtn" title="Go to top">
+    <i class="fa-solid fa-angle-up"></i>
+</button>
+
+<!-- Loader -->
+<div id="loader-wrapper">
+    <div class="loader">
+        <div class="justify-content-center jimu-primary-loading"></div>
+    </div>
+</div>
+
+<!-- Navbar -->
+<div class="topnav" id="myTopnav">
+    <div class="imgcontainer">
+        <div class="logo-div">
+            <a href="#home" id="logo">
+                <img class="logo" src="../img/logo.png" alt="logo">
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Hero Image -->
+<div class="hero-image">
+    <div style="font-size:64px">Privacy Policy</div>
+    <div style="font-size: 16px; padding:5px;" class="animate__animated animate__slideInUp"></div>
+</div>
+
+<!-- Privacy Policy Section -->
+<div class="terms-container">
+    <h2>Privacy Policy</h2>
+    <p>The Pydra Project (herein referred to as “Pydra”) takes privacy very seriously. This Privacy Policy outlines the conditions under which Pydra may access or monitor data hosted on hardware we provide.</p>
+
+    <h3>Data Access</h3>
+    <p>Pydra will never access any data hosted on our hardware, except in the following situation:</p>
+    <ul>
+        <li>We have reasonable suspicion of illegal activity or a violation of our Terms of Use.</li>
+        <li>We receive a valid request from law enforcement or a government authority.</li>
+        <li>We identify behavior that triggers our automated security tools as described below.</li>
+    </ul>
+
+    <h3>Automated Monitoring</h3>
+    <p>We use automated monitoring tools to detect Process IDs associated with known malicious or prohibited applications.</p>
+    <p>This monitoring does not involve reading or analyzing your hosted content.</p>
+    <p>If a violation is detected, we may take action, including suspension, and reserve the right to investigate further as needed.</p>
+
+    <h3>Data Sharing</h3>
+    <p>We do not sell, rent, or share your data with third parties, except as legally required or as outlined in these terms.</p>
+
+    <h3>Data Retention</h3>
+    <p>If your access to Pydra hosted hardware is suspended or terminated, all data stored on the hardware will be deleted after 14 days, unless required to preserve it by law enforcement or other legal obligations.</p>
+    <p>If you would like to obtain a copy of your data before deletion, you may contact the Pydra team to request a copy within 14 days of the initial suspension or termination.</p>
+
+    <h3>Policy Updates</h3>
+    <p>This policy may be updated periodically. Changes will be posted on our website, and your continued use implies acceptance.</p>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <hr>
+    <div class="footerText">
+        © The Pydra Project, <script>document.write(new Date().getFullYear());</script><br>
+        <a href="https://hcb.hackclub.com/pydra" target="_blank">The Pydra Project</a> is fiscally sponsored by 
+        <a href="https://the.hackfoundation.org/">The Hack Foundation</a> (d.b.a. Hack Club), a 501(c)(3) nonprofit (EIN: 81-2908499).
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+
+<script>
+    // Loader fade out
+    $(window).on('load', function () {
+        $("#loader-wrapper").fadeOut(700);
+    });
+
+    // Scroll to top
+    const mybutton = document.getElementById("myBtn");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "flex";
+        }
+    };
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+</script>
+
+<!-- Counter & Pageclip -->
+<script src="https://cdn.counter.dev/script.js" data-id="3a53e261-dd9c-4c39-9e87-9d97f844ae7c" data-utcoffset="-8"></script>
+<script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
+
+</body>
+</html>
