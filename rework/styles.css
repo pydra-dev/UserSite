@@ -200,6 +200,7 @@ body {
     position: relative;
     letter-spacing: -2px;
     font-family: 'Inter', monospace;
+    filter: drop-shadow(0 0 30px rgba(46, 176, 223, 0.8)) drop-shadow(0 0 60px rgba(46, 176, 223, 0.4));
 }
 
 .brand-name::before {
