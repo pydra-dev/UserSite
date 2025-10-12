@@ -146,7 +146,7 @@ body {
     justify-content: center;
     position: relative;
     padding: 100px 40px 60px;
-    background: radial-gradient(ellipse at center, var(--grey-800) 0%, var(--darkest-bg) 70%);
+    background: radial-gradient(ellipse at center, var(--grey-800) 0%, var(--dark-bg) 60%, var(--darkest-bg) 100%);
     overflow: hidden;
 }
 
@@ -240,12 +240,12 @@ body {
     right: 0;
     bottom: 0;
     background: linear-gradient(
-        135deg,
+        180deg,
         var(--darkest-bg) 0%,
-        var(--dark-bg) 50%,
+        var(--dark-bg) 30%,
+        var(--dark-bg) 70%,
         var(--darkest-bg) 100%
     );
-    opacity: 0.8;
     pointer-events: none;
 }
 
@@ -311,20 +311,20 @@ body {
 
 /* Specific Section Styling */
 .about-section {
-    background: var(--dark-bg);
+    background: linear-gradient(180deg, var(--darkest-bg) 0%, var(--dark-bg) 50%, var(--darkest-bg) 100%);
 }
 
 .microservers-section {
-    background: var(--darker-bg);
+    background: linear-gradient(180deg, var(--darkest-bg) 0%, var(--darker-bg) 50%, var(--darkest-bg) 100%);
 }
 
 .waitlist-section {
-    background: var(--dark-bg);
+    background: linear-gradient(180deg, var(--darkest-bg) 0%, var(--dark-bg) 50%, var(--darkest-bg) 100%);
     min-height: 80vh;
 }
 
 .contact-section {
-    background: var(--darker-bg);
+    background: linear-gradient(180deg, var(--darkest-bg) 0%, var(--darker-bg) 50%, var(--darkest-bg) 100%);
 }
 
 /* Waitlist Form */
