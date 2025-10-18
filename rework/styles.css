@@ -35,10 +35,81 @@ html::-webkit-scrollbar {
 
 body {
     font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    background: var(--darkest-bg);
+    background: linear-gradient(
+        180deg,
+        var(--darkest-bg) 0%,
+        var(--dark-bg) 20%,
+        var(--darker-bg) 40%,
+        var(--dark-bg) 60%,
+        var(--darker-bg) 80%,
+        var(--darkest-bg) 100%
+    );
+    background-attachment: fixed;
     color: var(--text-primary);
     line-height: 1.6;
     overflow-x: hidden;
+    position: relative;
+}
+
+/* Unified ambient glow effect */
+body::before {
+    content: '';
+    position: fixed;
+    top: 10%;
+    left: -10%;
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(
+        circle,
+        rgba(46, 176, 223, 0.08) 0%,
+        transparent 60%
+    );
+    border-radius: 50%;
+    pointer-events: none;
+    animation: float1 25s ease-in-out infinite;
+    z-index: 0;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    bottom: 10%;
+    right: -10%;
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(
+        circle,
+        rgba(0, 217, 255, 0.06) 0%,
+        transparent 60%
+    );
+    border-radius: 50%;
+    pointer-events: none;
+    animation: float2 30s ease-in-out infinite;
+    z-index: 0;
+}
+
+@keyframes float1 {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+    }
+    33% {
+        transform: translate(20%, -15%) scale(1.1);
+    }
+    66% {
+        transform: translate(-15%, 20%) scale(0.9);
+    }
+}
+
+@keyframes float2 {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+    }
+    40% {
+        transform: translate(-20%, 15%) scale(1.15);
+    }
+    80% {
+        transform: translate(15%, -10%) scale(0.95);
+    }
 }
 
 /* Scroll to Top Button */
@@ -146,32 +217,35 @@ body {
     justify-content: center;
     position: relative;
     padding: 100px 40px 60px;
-    background: radial-gradient(ellipse at center, var(--grey-800) 0%, var(--dark-bg) 60%, var(--darkest-bg) 100%);
-    overflow: hidden;
+    background: transparent;
+    overflow: visible;
 }
 
 .gradient-overlay {
     position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
+    top: -30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1200px;
+    height: 1200px;
     background: radial-gradient(
-        circle at 30% 40%,
-        rgba(46, 176, 223, 0.15) 0%,
-        rgba(46, 176, 223, 0.05) 25%,
-        transparent 50%
+        circle at center,
+        rgba(46, 176, 223, 0.12) 0%,
+        rgba(46, 176, 223, 0.04) 30%,
+        transparent 60%
     );
     pointer-events: none;
-    animation: gradientShift 20s ease infinite;
+    animation: gentlePulse 15s ease-in-out infinite;
 }
 
-@keyframes gradientShift {
+@keyframes gentlePulse {
     0%, 100% {
-        transform: translate(0, 0) scale(1);
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
     }
     50% {
-        transform: translate(-10%, -10%) scale(1.1);
+        opacity: 0.7;
+        transform: translateX(-50%) scale(1.05);
     }
 }
 
@@ -224,64 +298,60 @@ body {
 
 /* Section Base */
 .section {
-    min-height: 100vh;
+    min-height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    padding: 100px 40px;
-    overflow: hidden;
+    padding: 80px 40px;
+    overflow: visible;
+    background: transparent;
 }
 
 .gradient-bg {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(
-        180deg,
-        var(--darkest-bg) 0%,
-        var(--dark-bg) 30%,
-        var(--dark-bg) 70%,
-        var(--darkest-bg) 100%
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(
+        circle,
+        rgba(46, 176, 223, 0.04) 0%,
+        transparent 60%
     );
     pointer-events: none;
-}
-
-.gradient-bg::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    right: -20%;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(
-        circle,
-        rgba(46, 176, 223, 0.1) 0%,
-        transparent 70%
-    );
     border-radius: 50%;
+    animation: subtleFloat 20s ease-in-out infinite;
 }
 
-.gradient-bg-alt::before {
-    right: auto;
-    left: -20%;
+@keyframes subtleFloat {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        transform: translate(-45%, -55%) scale(1.1);
+    }
+}
+
+.gradient-bg-alt {
+    animation-delay: -5s;
     background: radial-gradient(
         circle,
-        rgba(0, 217, 255, 0.08) 0%,
-        transparent 70%
+        rgba(0, 217, 255, 0.03) 0%,
+        transparent 60%
     );
 }
 
-.gradient-bg-accent::before {
-    top: -30%;
-    right: 10%;
+.gradient-bg-accent {
+    width: 900px;
+    height: 900px;
+    animation-delay: -10s;
     background: radial-gradient(
         circle,
-        rgba(46, 176, 223, 0.15) 0%,
-        rgba(0, 217, 255, 0.05) 40%,
-        transparent 70%
+        rgba(46, 176, 223, 0.05) 0%,
+        rgba(0, 217, 255, 0.02) 40%,
+        transparent 60%
     );
 }
 
@@ -289,7 +359,7 @@ body {
     max-width: 900px;
     text-align: center;
     position: relative;
-    z-index: 2;
+    z-index: 1;
 }
 
 .section h2 {
@@ -309,22 +379,16 @@ body {
     margin: 0 auto;
 }
 
-/* Specific Section Styling */
-.about-section {
-    background: linear-gradient(180deg, var(--darkest-bg) 0%, var(--dark-bg) 50%, var(--darkest-bg) 100%);
-}
-
-.microservers-section {
-    background: linear-gradient(180deg, var(--darkest-bg) 0%, var(--darker-bg) 50%, var(--darkest-bg) 100%);
+/* Specific Section Styling - Seamless */
+.about-section,
+.microservers-section,
+.waitlist-section,
+.contact-section {
+    background: transparent;
 }
 
 .waitlist-section {
-    background: linear-gradient(180deg, var(--darkest-bg) 0%, var(--dark-bg) 50%, var(--darkest-bg) 100%);
     min-height: 80vh;
-}
-
-.contact-section {
-    background: linear-gradient(180deg, var(--darkest-bg) 0%, var(--darker-bg) 50%, var(--darkest-bg) 100%);
 }
 
 /* Waitlist Form */
@@ -399,9 +463,11 @@ body {
 
 /* Footer */
 .footer {
-    background: var(--darkest-bg);
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    background: transparent;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
     padding: 40px 40px;
+    position: relative;
+    z-index: 1;
 }
 
 .footer-content {
