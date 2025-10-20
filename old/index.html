@@ -1,0 +1,131 @@
+<!-- Site By The Pydra Team, Images Licensed to Unsplash, some elements from FOSS Sources, Licensed under the GNU Affero General Public License v3.0 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Pydra Project | Welcome</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta property="og:image" content="https://pydra.dev/favicon.png">
+    <meta name="title" content="The Pydra Project | Welcome">
+    <meta name="description" content="Pydra | Hosting for all.">
+    <meta name="keywords" content="pydra, the pydra project, free vps, server hosting, free server, server, server for students, free for dev, pydra, microservers, raspberry pi servers, student computing, nonprofit tech, pydra project, pydra.dev">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="language" content="English">
+    <meta name="author" content="The Pydra Project Team">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src=" https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js "></script>
+    <link href=" https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css " rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9fa80674d6.js" crossorigin="anonymous"></script>
+</head>
+<body id="home">
+<button onclick="topFunction()" id="myBtn" title="Go to top">
+    <i class="fa-solid fa-angle-up"></i>
+</button>
+<!-- Loader -->
+<div id="loader-wrapper">
+    <div class="loader">
+        <div class="justify-content-center jimu-primary-loading"></div>
+    </div>
+</div>
+<!-- Navbar Start -->
+<div class="topnav" id="myTopnav">
+    <div class="imgcontainer">
+        <div class="logo-div">
+            <a href="#home" id="logo">
+                <img class="logo" src="./img/logo.png" alt="logo">
+            </a>
+        </div>
+    </div>
+    <div class="links">
+        <a href="#home">Home</a>
+        <p>|</p>
+        <a href="#projects">Who Are We?</a>
+        <p>|</p>
+        <a href="#about">What's A Microserver?</a>
+        <p>|</p>
+        <a href="#contact">Contact</a>
+    </div>
+</div>
+<!-- Hero Image -->
+<div class="hero-image">
+    <div style="font-size:64px">Hi, we're<br>The Pydra Project.</div>
+    <div style="font-size: 16px; padding:5px;" class="animate__animated  animate__slideInUp">We strive to provide compute power to the next generation.</div>
+</div>
+<hr>
+<div class="about" id="about">
+    <div style="font-size:64px">What is The Pydra Project?</div>
+    <div style="font-size: 24px; padding: 5px">The Pydra Project is a small organization comprised of 3 teenagers who are trying to change<br>the IT landscape by providing free compute power to students and non-profits with "microservers".</div>
+</div>
+<hr>
+<div class="projects" id="projects">
+    <div style="font-size:64px; text-align: center;">What's a microserver? </div>
+    <div style="font-size: 24px"> A microserver is a small, power efficient computer that can be remotely accessed to be used for learning or aiding in shared goals.</div>
+</div>
+<hr>
+<!-- Waitlist Section -->
+<div class="waitlist" id="waitlist">
+    <span class="blob" style="top:-80px; left:-120px; width:220px; height:220px; background: radial-gradient(circle at 60% 40%, #2eb0df 60%, transparent 100%); border-radius: 50%;"></span>
+    <span class="blob" style="bottom:-60px; right:-100px; width:180px; height:180px; background: radial-gradient(circle at 40% 60%, #ffc107 60%, transparent 100%); border-radius: 50%;"></span>
+    <div class="section-bubble">
+        <div style="font-size:64px; margin-bottom: 20px;">Interested in a microserver?</div>
+        <p style="font-size: 24px; margin-bottom: 30px;">
+        Join the waitlist to be notified when we launch!<br>
+        </p>
+        <form action="https://send.pageclip.co/iF5Y6G8f7T8RZSDI9yEUojfk7kbQLH4m/WaitList" class="pageclip-form waitlist-form" method="post">
+            <input type="text" name="name" placeholder="Name" required />
+            <input type="email" name="email" placeholder="John@doe.com" required/>
+            <button type="submit" class="pageclip-form__submit">
+                <span>Submit</span>
+            </button>
+        </form>
+    </div>
+</div>
+<hr>
+<div class="contact" id="contact">
+    <div style="font-size:64px; margin: 5px;">Contact</div>
+    <br>
+    <div style="font-size: 24px; margin: 5px;">Have any questions or concerns?<br>Feel free to reach out to the team at <a href="mailto:support@pydra.dev">support@pydra.dev</a></div>
+</div>
+<div class="footer">
+    <hr>
+        <div class="footerText">© The Pydra Project, <script type="text/javascript">
+            document.write(new Date().getFullYear());
+        </script><br><a href="https://hcb.hackclub.com/pydra" target="_blank">The Pydra Project</a> is fiscally sponsored by <a href="https://the.hackfoundation.org/">The Hack Foundation</a> (d.b.a. Hack Club), a 501(c)(3) nonprofit (EIN: 81-2908499).</div>
+    </div>
+<!-- JQuery + Splide Scripts -->
+ <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+<script type="text/javascript">
+    $(window).on('load', function() {
+        $("#loader-wrapper").fadeOut(700);
+    });
+</script>
+<!-- Scroll to top button -->
+<script>
+    // Get the button
+    let mybutton = document.getElementById("myBtn");
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {
+        scrollFunction()
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "flex";
+        }
+    }
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+</script>
+<script src="https://cdn.counter.dev/script.js" data-id="3a53e261-dd9c-4c39-9e87-9d97f844ae7c" data-utcoffset="-8"></script>
+<!-- Pageclip Script -->
+<script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
+</body>
+</html>

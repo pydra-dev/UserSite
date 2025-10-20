@@ -16,116 +16,128 @@
     <meta name="author" content="The Pydra Project Team">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <script src=" https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js "></script>
-    <link href=" https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css " rel="stylesheet">
-    <script src="https://kit.fontawesome.com/9fa80674d6.js" crossorigin="anonymous"></script>
+   <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+ <script src="https://kit.fontawesome.com/9fa80674d6.js" crossorigin="anonymous"></script>
 </head>
 <body id="home">
 <button onclick="topFunction()" id="myBtn" title="Go to top">
     <i class="fa-solid fa-angle-up"></i>
 </button>
-<!-- Loader -->
-<div id="loader-wrapper">
-    <div class="loader">
-        <div class="justify-content-center jimu-primary-loading"></div>
-    </div>
-</div>
-<!-- Navbar Start -->
-<div class="topnav" id="myTopnav">
-    <div class="imgcontainer">
-        <div class="logo-div">
-            <a href="#home" id="logo">
-                <img class="logo" src="./img/logo.png" alt="logo">
-            </a>
+
+<!-- Minimal Navbar -->
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="#home" class="nav-logo">
+            <img src="./img/logo.png" alt="pydra logo">
+        </a>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#microservers">Microservers</a>
+            <a href="#contact">Contact</a>
         </div>
     </div>
-    <div class="links">
-        <a href="#home">Home</a>
-        <p>|</p>
-        <a href="#projects">Who Are We?</a>
-        <p>|</p>
-        <a href="#about">What's A Microserver?</a>
-        <p>|</p>
-        <a href="#contact">Contact</a>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+    <div class="gradient-overlay"></div>
+    <div class="hero-content">
+        <h1 class="hero-title">
+            Hi, we're<br>
+            <img class="brand-name" src="./img/logo-single.png" width="400rem">
+        </h1>
+        <p class="hero-subtitle">We strive to provide compute power to the next generation.</p>
     </div>
-</div>
-<!-- Hero Image -->
-<div class="hero-image">
-    <div style="font-size:64px">Hi, we're<br>The Pydra Project.</div>
-    <div style="font-size: 16px; padding:5px;" class="animate__animated  animate__slideInUp">We strive to provide compute power to the next generation.</div>
-</div>
-<hr>
-<div class="about" id="about">
-    <div style="font-size:64px">What is The Pydra Project?</div>
-    <div style="font-size: 24px; padding: 5px">The Pydra Project is a small organization comprised of 3 teenagers who are trying to change<br>the IT landscape by providing free compute power to students and non-profits with "microservers".</div>
-</div>
-<hr>
-<div class="projects" id="projects">
-    <div style="font-size:64px; text-align: center;">What's a microserver? </div>
-    <div style="font-size: 24px"> A microserver is a small, power efficient computer that can be remotely accessed to be used for learning or aiding in shared goals.</div>
-</div>
-<hr>
+</section>
+
+<!-- About Section -->
+<section class="section about-section" id="about">
+    <div class="gradient-bg"></div>
+    <div class="section-content">
+        <h2>What is The Pydra Project?</h2>
+        <p>The Pydra Project is an organiztion dedicated to providing microservers to students and nonprofits alike.</p>
+    </div>
+</section>
+
+<!-- Microservers Section -->
+<section class="section microservers-section" id="microservers">
+    <div class="gradient-bg gradient-bg-alt"></div>
+    <div class="section-content">
+        <h2>What's a microserver?</h2>
+        <p>A microserver is a small, power efficient computer that can be remotely accessed to be used for learning or aiding in shared goals such as selfhosting a program.</p>
+    </div>
+</section>
+
 <!-- Waitlist Section -->
-<div class="waitlist" id="waitlist">
-    <span class="blob" style="top:-80px; left:-120px; width:220px; height:220px; background: radial-gradient(circle at 60% 40%, #2eb0df 60%, transparent 100%); border-radius: 50%;"></span>
-    <span class="blob" style="bottom:-60px; right:-100px; width:180px; height:180px; background: radial-gradient(circle at 40% 60%, #ffc107 60%, transparent 100%); border-radius: 50%;"></span>
-    <div class="section-bubble">
-        <div style="font-size:64px; margin-bottom: 20px;">Interested in a microserver?</div>
-        <p style="font-size: 24px; margin-bottom: 30px;">
-        Join the waitlist to be notified when we launch!<br>
-        </p>
+<section class="section waitlist-section" id="waitlist">
+    <div class="gradient-bg gradient-bg-accent"></div>
+    <div class="section-content">
+        <h2>Interested in a microserver?</h2>
+        <h3> We currently have 1 available microserver.</h3>
+        <p>Join the waitlist to be notified when we launch!</p>
+        
         <form action="https://send.pageclip.co/iF5Y6G8f7T8RZSDI9yEUojfk7kbQLH4m/WaitList" class="pageclip-form waitlist-form" method="post">
             <input type="text" name="name" placeholder="Name" required />
-            <input type="email" name="email" placeholder="John@doe.com" required/>
+            <input type="email" name="email" placeholder="john@doe.com" required/>
             <button type="submit" class="pageclip-form__submit">
-                <span>Submit</span>
+                <span>Join Waitlist</span>
             </button>
         </form>
     </div>
-</div>
-<hr>
-<div class="contact" id="contact">
-    <div style="font-size:64px; margin: 5px;">Contact</div>
-    <br>
-    <div style="font-size: 24px; margin: 5px;">Have any questions or concerns?<br>Feel free to reach out to the team at <a href="mailto:support@pydra.dev">support@pydra.dev</a></div>
-</div>
-<div class="footer">
-    <hr>
-        <div class="footerText">© The Pydra Project, <script type="text/javascript">
-            document.write(new Date().getFullYear());
-        </script><br><a href="https://hcb.hackclub.com/pydra" target="_blank">The Pydra Project</a> is fiscally sponsored by <a href="https://the.hackfoundation.org/">The Hack Foundation</a> (d.b.a. Hack Club), a 501(c)(3) nonprofit (EIN: 81-2908499).</div>
+</section>
+
+<!-- Contact Section -->
+<section class="section contact-section" id="contact">
+    <div class="gradient-bg"></div>
+    <div class="section-content">
+        <h2>Contact</h2>
+        <p>Have any questions or concerns?<br>Feel free to reach out to the team at <a href="mailto:support@pydra.dev">support@pydra.dev</a>, or contact us in #pydra on the Hack Club Slack!</p>
     </div>
-<!-- JQuery + Splide Scripts -->
- <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <p>© The Pydra Project, <script type="text/javascript">document.write(new Date().getFullYear());</script></p>
+        <p><a href="https://hcb.hackclub.com/pydra" target="_blank">The Pydra Project</a> is fiscally sponsored by <a href="https://the.hackfoundation.org/">The Hack Foundation</a> (d.b.a. Hack Club), a 501(c)(3) nonprofit (EIN: 81-2908499).</p>
+    </div>
+</footer>
+
+<!-- Scripts -->
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
-<script type="text/javascript">
-    $(window).on('load', function() {
-        $("#loader-wrapper").fadeOut(700);
-    });
-</script>
-<!-- Scroll to top button -->
 <script>
-    // Get the button
+    // Scroll to top button
     let mybutton = document.getElementById("myBtn");
-    // When the user scrolls down 20px from the top of the document, show the button
+    
     window.onscroll = function() {
-        scrollFunction()
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            mybutton.style.display = "flex";
+        } else {
+            mybutton.style.display = "none";
+        }
     };
 
-    function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            mybutton.style.display = "flex";
-        }
-    }
-    // When the user clicks on the button, scroll to the top of the document
     function topFunction() {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
     }
+
+    // Smooth scroll for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
 </script>
 <script src="https://cdn.counter.dev/script.js" data-id="3a53e261-dd9c-4c39-9e87-9d97f844ae7c" data-utcoffset="-8"></script>
-<!-- Pageclip Script -->
 <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
 </body>
 </html>
