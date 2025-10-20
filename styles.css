@@ -139,6 +139,8 @@ body::after {
     background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
     transform: translateY(-3px);
     box-shadow: 0 6px 25px rgba(46, 176, 223, 0.4);
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out
 }
 
 /* Navbar */
