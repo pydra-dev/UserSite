@@ -298,7 +298,7 @@ body::after {
 
 /* Section Base */
 .section {
-    min-height: 90vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -358,7 +358,7 @@ body::after {
 .section-content {
     max-width: 900px;
     text-align: center;
-    position: static;
+    position: relative;
     z-index: 1;
 }
 
