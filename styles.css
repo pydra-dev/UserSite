@@ -358,7 +358,7 @@ body::after {
 .section-content {
     max-width: 900px;
     text-align: center;
-    position: fixed;
+    position: static;
     z-index: 1;
 }
 
