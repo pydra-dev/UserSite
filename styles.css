@@ -34,7 +34,7 @@ html::-webkit-scrollbar {
 }
 
 body {
-    font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Figtree', 'Segoe UI', sans-serif;
     background: linear-gradient(
         180deg,
         var(--darkest-bg) 0%,
