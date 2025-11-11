@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oncho! - Creative Design Tutorials</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>oncho!</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#tutorials">Tutorials</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">oncho!</h1>
+            <p class="hero-subtitle">Learn creative design techniques with fun, step-by-step tutorials</p>
+            <a href="#tutorials" class="cta-button">Start Learning</a>
+        </div>
+    </section>
+
+    <!-- Tutorials Section -->
+    <section id="tutorials" class="tutorials-section">
+        <div class="container">
+            <h2 class="section-title">Featured Tutorials</h2>
+            <div class="tutorial-grid">
+                <div class="tutorial-card">
+                    <div class="tutorial-image">
+                        <div class="placeholder-img">
+                            <span>Tutorial 1</span>
+                        </div>
+                    </div>
+                    <div class="tutorial-content">
+                        <h3>Text Effects Basics</h3>
+                        <p>Learn how to create stunning text effects with simple techniques</p>
+                        <a href="#" class="read-more">View Tutorial →</a>
+                    </div>
+                </div>
+                
+                <div class="tutorial-card">
+                    <div class="tutorial-image">
+                        <div class="placeholder-img">
+                            <span>Tutorial 2</span>
+                        </div>
+                    </div>
+                    <div class="tutorial-content">
+                        <h3>Color Gradients</h3>
+                        <p>Master the art of creating beautiful color gradients and blends</p>
+                        <a href="#" class="read-more">View Tutorial →</a>
+                    </div>
+                </div>
+                
+                <div class="tutorial-card">
+                    <div class="tutorial-image">
+                        <div class="placeholder-img">
+                            <span>Tutorial 3</span>
+                        </div>
+                    </div>
+                    <div class="tutorial-content">
+                        <h3>Creative Typography</h3>
+                        <p>Explore typography techniques to make your designs stand out</p>
+                        <a href="#" class="read-more">View Tutorial →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">About oncho!</h2>
+            <div class="about-content">
+                <p>Welcome to oncho! - your go-to destination for creative design tutorials. We believe in making design accessible and fun for everyone, from beginners to experienced creators.</p>
+                <p>Our step-by-step tutorials guide you through various design techniques, helping you develop your skills and unleash your creativity.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="contact-content">
+                <p>Have questions or suggestions? We'd love to hear from you!</p>
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 oncho! All rights reserved.</p>
+            <p>Made with ❤️ for creative minds</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to navbar
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
