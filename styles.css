@@ -269,7 +269,6 @@ body::after {
 .brand-name {
     display: inline-block;
     background: linear-gradient(135deg, var(--accent-cyan) 0%, var(--accent-blue) 100%);
-    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     position: relative;
     filter: drop-shadow(0 0 30px rgba(46, 176, 223, 0.8)) drop-shadow(0 0 60px rgba(46, 176, 223, 0.4));
