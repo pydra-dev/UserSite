@@ -17,14 +17,13 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
-                <h1>pydra</h1>
+                <a href="#home" class="nav-logo">
+            <img src="../img/logo.png" alt="pydra logo">
+        </a>
             </div>
             <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#microservers">Microservers</a></li>
                 <li><a href="#faq">FAQ</a></li>
-                <li><a href="#waitlist">Waitlist</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -33,9 +32,11 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1 class="hero-title">pydra!</h1>
-            <p class="hero-subtitle">providing microservers since 2025</p>
-            <a href="#waitlist" class="cta-button">Join Waitlist</a>
+        <h1 class="hero-title">
+            Hi, we're<br>
+            <img class="brand-name" src="../img/logo-single.png" width="400rem">
+        </h1>
+            <p class="hero-subtitle">providing microservers since 2025!</p>
         </div>
     </section>
 
@@ -45,16 +46,6 @@
             <h2 class="section-title">Who are we?</h2>
             <div class="about-content">
                 <p>We're a nonprofit providing students with a cost effective equivalent of a virtual private server, aka a microserver :D</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Microservers Section -->
-    <section id="microservers" class="microservers-section">
-        <div class="container">
-            <h2 class="section-title">What am I getting when using a microserver?</h2>
-            <div class="microservers-content">
-                <p>The hardware we use for microservers are mainly Raspberry Pi's, so they can be used as any other thing you want them to! Just SSH and you're good to go!</p>
             </div>
         </div>
     </section>
@@ -80,22 +71,77 @@
     <!-- FAQ Section -->
     <section id="faq" class="faq-section">
         <div class="container">
-            <h2 class="section-title">Have questions? We answer them!!!</h2>
+            <h2 class="section-title">FAQ</h2>
             <div class="faq-container">
+
                 <div class="faq-item">
                     <button class="faq-question">
-                        <span>What is Pydra?</span>
+                        <span>What am I getting when using a microserver?</span>
                         <span class="faq-icon">▼</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Pydra is a nonprofit providing students with cost-effective microservers. We use Raspberry Pi hardware to give you your own server that you can access via SSH and use for your projects!</p>
+      <p>The hardware we use for microservers are mainly Raspberry Pi's, so they can be used as any other thing you want them to! Just SSH and you're good to go!</p>
+           </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What can I do with a microserver?</span>
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>You can host websites, run bots, create APIs, learn Linux, experiment with coding projects, set up databases, and much more! It's your own server to use however you'd like.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        <span>Am I eligible to participate?</span>
+                        <span>How do I access my microserver?</span>
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We'll send you login details to you once we get up and running :D</p>
+                    </div>
+                    </div>
+                    <div class="faq-item">
+                    <button class="faq-question">
+                        <span>I got an email to check out this site, how do I know you guys actually have a microserver?</span>
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Say hi to Bernard!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Have any questions or concerns?</h2>
+            <div class="contact-content">
+                <p>Feel free to reach out to us at <a href="mailto:support@pydra.dev">support@pydra.dev</a>, or contact us in #pydra on the Hack Club Slack!</p>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <p>© The Pydra Project, <script type="text/javascript">document.write(new Date().getFullYear());</script></p>
+        <p><a href="https://hcb.hackclub.com/pydra" target="_blank">The Pydra Project</a> is fiscally sponsored by <a href="https://the.hackfoundation.org/">The Hack Foundation</a> (d.b.a. Hack Club), a 501(c)(3) nonprofit (EIN: 81-2908499).</p>
+    </div>
+</footer>
     <script>
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -137,65 +183,6 @@
                 }
             });
         });
-    </script>           <span>How much does it cost?</span>
-                        <span class="faq-icon">▼</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Our microservers are provided to students at a very low cost to cover basic maintenance and electricity. We're a nonprofit, so our goal is accessibility, not profit!</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>What can I do with a microserver?</span>
-                        <span class="faq-icon">▼</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>You can host websites, run bots, create APIs, learn Linux, experiment with coding projects, set up databases, and much more! It's your own server to use however you'd like.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Can I still participate if I'm a beginner?</span>
-                        <span class="faq-icon">▼</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Absolutely! We welcome beginners and provide basic guidance to help you get started. It's a great way to learn server administration and Linux skills.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>How do I access my microserver?</span>
-                        <span class="faq-icon">▼</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>You'll access your microserver via SSH (Secure Shell). We'll provide you with connection details and basic instructions once your microserver is set up.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2 class="section-title">Have any questions or concerns?</h2>
-            <div class="contact-content">
-                <p>Feel free to reach out to us at <a href="mailto:support@pydra.dev">support@pydra.dev</a>, or contact us in #pydra on the Hack Club Slack!</p>
-            </div>
-        </div>
-    </section>
-    <script>
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-    </script>
+        </script>
 </body>
 </html>
