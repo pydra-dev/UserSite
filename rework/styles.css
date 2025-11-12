@@ -667,8 +667,42 @@ html[data-theme="dark"] .faq-question:hover {
     border-radius: 8px;
 }
 
+.faq-answer a {
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.faq-answer a:hover {
+    color: var(--light-blue);
+    border-bottom-color: var(--light-blue);
+}
+
+.faq-answer a:visited {
+    color: var(--primary-blue);
+}
+
+.faq-answer a:visited:hover {
+    color: var(--light-blue);
+}
+
 html[data-theme="dark"] .faq-answer p {
     color: #fff;
+}
+
+html[data-theme="dark"] .faq-answer a {
+    color: var(--light-blue);
+}
+
+html[data-theme="dark"] .faq-answer a:hover {
+    color: #fff;
+    border-bottom-color: #fff;
+}
+
+html[data-theme="dark"] .faq-answer a:visited {
+    color: var(--light-blue);
 }
 
 .contact-form {
