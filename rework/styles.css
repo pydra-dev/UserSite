@@ -30,7 +30,8 @@ html {
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #e0f7ff 0%, #b3e5fc 100%);
+    background: linear-gradient(135deg, #e0f7ff 0%, #b3e5fc 50%, #81d4fa 100%);
+    background-attachment: fixed;
     color: var(--text-dark);
     line-height: 1.6;
     overflow-x: hidden;
@@ -120,7 +121,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 100px 20px 60px;
-    background: linear-gradient(135deg, #e0f7ff 0%, #b3e5fc 50%, #81d4fa 100%);
+    background: transparent;
     position: relative;
     overflow: hidden;
 }
@@ -233,7 +234,7 @@ body {
 /* Tutorials Section */
 .tutorials-section {
     padding: 80px 20px;
-    background: var(--bg-white);
+    background: transparent;
 }
 
 .tutorial-grid {
@@ -306,12 +307,12 @@ body {
 /* About Section */
 .about-section {
     padding: 80px 20px;
-    background: linear-gradient(135deg, #f0f9ff 0%, #e0f7ff 100%);
+    background: transparent;
 }
 
 .about-section-alt {
     padding: 80px 20px;
-    background: var(--bg-white);
+    background: transparent;
 }
 
 .about-content {
@@ -330,7 +331,7 @@ body {
 /* Microservers Section */
 .microservers-section {
     padding: 80px 20px;
-    background: linear-gradient(135deg, #f0f9ff 0%, #e0f7ff 100%);
+    background: transparent;
 }
 
 .microservers-content {
@@ -348,7 +349,7 @@ body {
 /* Waitlist Section */
 .waitlist-section {
     padding: 80px 20px;
-    background: var(--bg-white);
+    background: transparent;
 }
 
 .waitlist-content {
@@ -395,7 +396,7 @@ body {
 /* Contact Section */
 .contact-section {
     padding: 80px 20px;
-    background: linear-gradient(135deg, #f0f9ff 0%, #e0f7ff 100%);
+    background: transparent;
 }
 
 .contact-content {
@@ -425,7 +426,7 @@ body {
 /* FAQ Section */
 .faq-section {
     padding: 80px 20px;
-    background: white;
+    background: transparent;
 }
 
 .faq-container {
@@ -435,7 +436,7 @@ body {
 
 .faq-item {
     margin-bottom: 15px;
-    background: linear-gradient(135deg, #81d4fa 0%, #5eb3e4 100%);;
+    background: var(--bg-white);
     border-radius: 12px;
     overflow: hidden;
     transition: all 0.3s ease;
