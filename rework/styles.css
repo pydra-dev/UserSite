@@ -639,16 +639,12 @@ html[data-theme="dark"] .faq-question:hover {
 .faq-answer {
     max-height: 0;
     overflow: hidden;
-.faq-answer p {
-    font-size: 16px;
-    line-height: 1.8;
-    color: #555;
-    margin: 0;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 25px;
 }
 
-html[data-theme="dark"] .faq-answer p {
-    color: var(--text-secondary);
-}   max-height: 500px;
+.faq-item.active .faq-answer {
+    max-height: 2000px;
     padding: 0 25px 20px 25px;
 }
 
@@ -656,7 +652,19 @@ html[data-theme="dark"] .faq-answer p {
     font-size: 16px;
     line-height: 1.8;
     color: #555;
-    margin: 0;
+    margin: 0 0 15px 0;
+}
+
+.faq-answer img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 15px 0;
+    border-radius: 8px;
+}
+
+html[data-theme="dark"] .faq-answer p {
+    color: var(--text-secondary);
 }
 
 .contact-form {
