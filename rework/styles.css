@@ -10,8 +10,8 @@
 
 /* Root Variables */
 :root {
-    --primary-blue: #5eb3e4;
-    --light-blue: #87ceeb;
+    --primary-blue: #2596BE;
+    --light-blue: #41B7E0;
     --gradient-pink: #ff6b9d;
     --gradient-purple: #c471ed;
     --gradient-orange: #ffa500;
@@ -72,7 +72,7 @@ body {
 .logo h1 {
     font-size: 32px;
     font-weight: 800;
-    background: linear-gradient(135deg, var(--gradient-pink), var(--gradient-purple), var(--gradient-orange));
+    background: linear-gradient(135deg, var(--primary-blue), var(--light-blue));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -95,7 +95,7 @@ body {
 }
 
 .nav-menu a:hover {
-    color: var(--gradient-pink);
+    color: var(--primary-blue);
 }
 
 .nav-menu a::after {
@@ -105,7 +105,7 @@ body {
     left: 0;
     width: 0;
     height: 2px;
-    background: linear-gradient(90deg, var(--gradient-pink), var(--gradient-purple));
+    background: linear-gradient(90deg, var(--primary-blue), var(--light-blue));
     transition: width 0.3s ease;
 }
 
@@ -171,7 +171,7 @@ body {
     font-size: clamp(60px, 12vw, 140px);
     font-weight: 800;
     margin-bottom: 20px;
-    background: linear-gradient(135deg, #ff6b9d, #c471ed, #ffa500, #ffd700);
+    background: linear-gradient(135deg, #2596BE, #41B7E0, #2596BE, #41B7E0);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -203,19 +203,19 @@ body {
 .cta-button {
     display: inline-block;
     padding: 15px 40px;
-    background: linear-gradient(135deg, var(--gradient-pink), var(--gradient-purple));
+    background: linear-gradient(135deg, var(--primary-blue), var(--light-blue));
     color: var(--text-light);
     text-decoration: none;
     border-radius: 50px;
     font-weight: 600;
     font-size: 18px;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(255, 107, 157, 0.3);
+    box-shadow: 0 4px 15px rgba(37, 150, 190, 0.3);
 }
 
 .cta-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(255, 107, 157, 0.4);
+    box-shadow: 0 6px 20px rgba(37, 150, 190, 0.4);
 }
 
 /* Section Titles */
@@ -224,7 +224,7 @@ body {
     font-weight: 700;
     text-align: center;
     margin-bottom: 50px;
-    background: linear-gradient(135deg, var(--gradient-pink), var(--gradient-purple));
+    background: linear-gradient(135deg, var(--primary-blue), var(--light-blue));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -388,8 +388,8 @@ body {
 
 .waitlist-form input:focus {
     outline: none;
-    border-color: var(--gradient-pink);
-    box-shadow: 0 0 0 3px rgba(255, 107, 157, 0.1);
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(37, 150, 190, 0.1);
 }
 
 /* Contact Section */
@@ -412,14 +412,14 @@ body {
 }
 
 .contact-content a {
-    color: var(--gradient-pink);
+    color: var(--primary-blue);
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s ease;
 }
 
 .contact-content a:hover {
-    color: var(--gradient-purple);
+    color: var(--light-blue);
 }
 
 .contact-form {
@@ -447,7 +447,7 @@ body {
 
 .submit-button {
     padding: 15px 40px;
-    background: linear-gradient(135deg, var(--gradient-pink), var(--gradient-purple));
+    background: linear-gradient(135deg, var(--primary-blue), var(--light-blue));
     color: var(--text-light);
     border: none;
     border-radius: 50px;
@@ -455,12 +455,12 @@ body {
     font-size: 18px;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(255, 107, 157, 0.3);
+    box-shadow: 0 4px 15px rgba(37, 150, 190, 0.3);
 }
 
 .submit-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(255, 107, 157, 0.4);
+    box-shadow: 0 6px 20px rgba(37, 150, 190, 0.4);
 }
 
 /* Footer */
