@@ -746,6 +746,10 @@ html[data-theme="dark"] .footer {
         justify-content: center;
     }
     
+    .brand-name{
+
+        width: 17rem;
+    }
     .hero {
         padding: 120px 20px 60px;
     }
