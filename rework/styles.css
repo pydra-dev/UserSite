@@ -23,7 +23,7 @@
     --shadow: rgba(0, 0, 0, 0.1);
 }
 span{
-font-family:"Figtree","Poppins", sans-serif;
+font-family:"Figtree","Poppins",
 
 }
 /* Dark Mode Variables */
@@ -42,6 +42,7 @@ html[data-theme="dark"] {
     --grey-600: #333333;
     --text-secondary: #b0b0b0;
     --text-muted: #808080;
+    
 }
 
 /* Global Styles */
@@ -654,7 +655,7 @@ html[data-theme="dark"] .faq-question:hover {
 .faq-answer p {
     font-size: 16px;
     line-height: 1.8;
-    color: #fff;
+    color: #555;
     margin: 0 0 15px 0;
 }
 
@@ -667,7 +668,7 @@ html[data-theme="dark"] .faq-question:hover {
 }
 
 html[data-theme="dark"] .faq-answer p {
-    color: var(--text-secondary);
+    color: #fff;
 }
 
 .contact-form {

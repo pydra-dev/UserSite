@@ -107,7 +107,7 @@
                         <span class="faq-icon">▼</span>
                     </button>
                     <div class="faq-answer">
-                        <p>We'll send you login details to you once we get up and running :D</p>
+                        <p>We'll send you login details once your microserver gets up and running :D</p>
                     </div>
                     </div>
                     <div class="faq-item">
@@ -184,21 +184,13 @@
             }
         });
 
-        // FAQ Accordion functionality
+        // FAQ Accordion functionality - Allow multiple open
         document.querySelectorAll('.faq-question').forEach(button => {
             button.addEventListener('click', () => {
                 const faqItem = button.parentElement;
-                const isOpen = faqItem.classList.contains('active');
                 
-                // Close all FAQ items
-                document.querySelectorAll('.faq-item').forEach(item => {
-                    item.classList.remove('active');
-                });
-                
-                // Open clicked item if it wasn't already open
-                if (!isOpen) {
-                    faqItem.classList.add('active');
-                }
+                // Toggle the clicked item
+                faqItem.classList.toggle('active');
             });
         });
 
