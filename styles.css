@@ -173,16 +173,6 @@ html[data-theme="dark"]::view-transition-new(root) {
         clip-path: polygon(171% 50%, 50% 171%, -50% 71%, 50% -71%);
     }
 }
-        var(--darkest-bg) 0%,
-        var(--dark-bg) 20%,
-        var(--darker-bg) 40%,
-        var(--dark-bg) 60%,
-        var(--darker-bg) 80%,
-        var(--darkest-bg) 100%
-    );
-    background-attachment: fixed;
-}
-
 /* Dark mode ambient glow effects */
 html[data-theme="dark"] body::before {
     content: '';
