@@ -1,2 +1,3 @@
 # Pydra | Main Website
-This is a repository for The Pydra Project (Pydra for short)'s main website which is hosted on [pydra.dev](https://pydra.dev) to show prospective users the goal of our service.
+This is a repository for our  website :D
+Hosted on [pydra.dev](https://pydra.dev), this is to show users what we're about!
