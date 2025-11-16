@@ -16,9 +16,7 @@
     <meta name="author" content="The Pydra Project Team">
     
     <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/9fa80674d6.js" crossorigin="anonymous"></script>
 </head>
 <body id="home">
@@ -28,29 +26,34 @@
     <i class="fa-solid fa-angle-up"></i>
 </button>
 
-<!-- Loader -->
-<div id="loader-wrapper">
-    <div class="loader">
-        <div class="justify-content-center jimu-primary-loading"></div>
-    </div>
-</div>
-
-<!-- Navbar -->
-<div class="topnav" id="myTopnav">
-    <div class="imgcontainer">
-        <div class="logo-div">
-            <a href="/" id="logo">
-                <img class="logo" src="../img/logo.png" alt="logo">
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">
+            <a href="/" class="nav-logo">
+                <img src="../img/logo.png" alt="pydra logo">
             </a>
         </div>
+        <ul class="nav-menu">
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#faq">FAQ</a></li>
+            <li><a href="/#contact">Contact</a></li>
+            <li>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                    <span class="sun-icon">☀️</span>
+                    <span class="moon-icon">🌙</span>
+                </button>
+            </li>
+        </ul>
     </div>
-</div>
+</nav>
 
-<!-- Hero Image -->
-<div class="hero-image">
-    <div style="font-size:64px">Privacy Policy</div>
-    <div style="font-size: 16px; padding:5px;" class="animate__animated animate__slideInUp"></div>
-</div>
+<!-- Hero Section -->
+<section class="hero" style="min-height: 50vh;">
+    <div class="hero-content">
+        <h1 class="hero-title" style="font-size: clamp(36px, 6vw, 64px);">Privacy Policy</h1>
+    </div>
+</section>
 
 <!-- Privacy Policy Section -->
 <div class="terms-container">
@@ -81,41 +84,67 @@
 </div>
 
 <!-- Footer -->
-<div class="footer">
-    <hr>
-    <div class="footerText">
-        © The Pydra Project, <script>document.write(new Date().getFullYear());</script><br>
-        <a href="https://hcb.hackclub.com/pydra" target="_blank">The Pydra Project</a> is fiscally sponsored by 
-        <a href="https://the.hackfoundation.org/">The Hack Foundation</a> (d.b.a. Hack Club), a 501(c)(3) nonprofit (EIN: 81-2908499).
+<footer class="footer">
+    <div class="footer-content">
+        <p>© The Pydra Project, <script type="text/javascript">document.write(new Date().getFullYear());</script></p>
+        <p><a href="https://hcb.hackclub.com/pydra" target="_blank">The Pydra Project</a> is fiscally sponsored by <a href="https://the.hackfoundation.org/">The Hack Foundation</a> (d.b.a. Hack Club), a 501(c)(3) nonprofit (EIN: 81-2908499).</p>
     </div>
-</div>
+</footer>
 
 <!-- Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
-
 <script>
-    // Loader fade out
-    $(window).on('load', function () {
-        $("#loader-wrapper").fadeOut(700);
-    });
-
     // Scroll to top
     const mybutton = document.getElementById("myBtn");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    window.onscroll = function() {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
             mybutton.style.display = "flex";
+        } else {
+            mybutton.style.display = "none";
         }
     };
     function topFunction() {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
     }
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+
+    // Dark mode toggle functionality with View Transitions
+    const themeToggle = document.getElementById('theme-toggle');
+    const htmlElement = document.documentElement;
+
+    // Check for saved theme preference or default to dark mode
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+    htmlElement.setAttribute('data-theme', currentTheme);
+    if (currentTheme === 'dark') htmlElement.classList.add('dark');
+
+    const applyTheme = (newTheme) => {
+        htmlElement.setAttribute('data-theme', newTheme);
+        if (newTheme === 'dark') htmlElement.classList.add('dark'); else htmlElement.classList.remove('dark');
+        localStorage.setItem('theme', newTheme);
+    };
+
+    themeToggle.addEventListener('click', () => {
+        const cur = htmlElement.getAttribute('data-theme');
+        const newTheme = cur === 'light' ? 'dark' : 'light';
+
+        if (document.startViewTransition) {
+            document.startViewTransition(() => applyTheme(newTheme));
+        } else {
+            applyTheme(newTheme);
+        }
+    });
 </script>
 
-<!-- Counter & Pageclip -->
 <script src="https://cdn.counter.dev/script.js" data-id="3a53e261-dd9c-4c39-9e87-9d97f844ae7c" data-utcoffset="-8"></script>
-<script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
 
 </body>
 </html>

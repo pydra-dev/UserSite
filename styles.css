@@ -860,6 +860,58 @@ html[data-theme="dark"] .footer {
     color: var(--text-light);
 }
 
+/* Terms/Privacy Policy Pages Styling */
+.terms-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 80px 40px 100px;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.terms-container h2 {
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: var(--text-dark);
+    text-align: center;
+    line-height: 1.4;
+}
+
+.terms-container h3 {
+    font-size: clamp(24px, 3vw, 32px);
+    font-weight: 500;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: var(--text-dark);
+    line-height: 1.4;
+}
+
+.terms-container p {
+    font-size: clamp(16px, 2vw, 18px);
+    color: var(--text-dark);
+    line-height: 2;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.terms-container ul {
+    margin-left: 30px;
+    margin-bottom: 25px;
+    text-align: left;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.terms-container ul li {
+    font-size: clamp(16px, 2vw, 18px);
+    color: var(--text-dark);
+    line-height: 2;
+    margin-bottom: 15px;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-container {
