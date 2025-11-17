@@ -293,6 +293,7 @@ html[data-theme="dark"] .navbar.scrolled {
     display: flex;
     list-style: none;
     gap: 30px;
+    align-items: center;
 }
 
 .nav-menu a {
@@ -913,10 +914,6 @@ html[data-theme="dark"] .faq-answer a:visited {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .nav-container {
-        position: relative;
-    }
-    
     .nav-menu {
         gap: 15px;
         flex-wrap: wrap;
