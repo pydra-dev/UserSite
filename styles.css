@@ -603,6 +603,7 @@ html[data-theme="dark"] .moon-icon {
     transition: all 0.3s ease;
     background: var(--bg-white);
     color: var(--text-dark);
+    text-align:center;
 }
 
 .waitlist-form input::placeholder {
